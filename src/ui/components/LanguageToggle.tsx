@@ -1,11 +1,9 @@
 import { useLanguage } from '../../state/LanguageContext';
 
 export const LanguageToggle = () => {
-  const { language, setLanguage, isLoading } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
-  const languageHandler = (lang: string) => `px-3 py-1 rounded ${language === lang ? 'bg-primary-dark text-gray dark:text-white' : 'bg-primary text-white'}`;
-
-  if (isLoading) return <span>Loading…</span>;
+  const languageHandler = (lang: string) => `px-3 py-1 rounded ${language === lang ? 'bg-primary text-gray dark:text-white' : 'bg-primary-dark text-gray-light'}`;
 
   return (
     <div className="flex gap-2">
