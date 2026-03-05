@@ -1,2 +1,2 @@
-export * from './Languages';
-export * from './GoogleSheetsData';
+export * from '../types/Languages';
+export * from '../types/GoogleSheetsData';
