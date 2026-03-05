@@ -1,3 +1,13 @@
-export { LanguageToggle } from './LanguageToggle';
-export { ThemeToggle } from './ThemeToggle';
-export { Layout } from './Layout';
+export { LanguageToggle } from './common/LanguageToggle';
+export { ThemeToggle } from './common/ThemeToggle';
+export { Loader } from './common/Loader/Loader';
+export { Sidebar } from './Sidebar/Sidebar';
+export { Main } from './Main/Main';
+export { default as Preference } from './Sidebar/Preference/Preference';
+export { default as Personal } from './Sidebar/Personal/Personal';
+export { default as Contacts } from './Sidebar/Contacts/Contacts';
+export { default as Social } from './Sidebar/Social/Social';
+export { default as Languages } from './Sidebar/Languages/Languages';
+export { default as PhotoTile } from './Sidebar/PhotoTile/PhotoTile';
+export { default as About } from './Main/About/About';
+export { default as Experience } from './Main/Experience/Experience';
