@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
-import { getLocal } from '../helpers/storage';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { getLocal, setLocal } from '../helpers/storage';
 import type { Language, LanguageContextProps } from '../types';
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
@@ -10,6 +10,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     if (stored === 'en' || stored === 'ua') return stored;
     return 'en';
   });
+
+  useEffect(() => {
+    setLocal<Language>('language', language);
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: setLanguageState }}>
