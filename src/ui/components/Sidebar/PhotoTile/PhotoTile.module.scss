@@ -1,0 +1,21 @@
+.photoTile {
+	overflow: hidden;
+	position: relative;
+}
+
+.photo {
+	object-fit: cover;
+	transition: transform 0.6s;
+	-webkit-transition: transform 0.6s;
+	-moz-transition: transform 0.6s;
+	-ms-transition: transform 0.6s;
+	-o-transition: transform 0.6s;
+}
+
+.photoTile:hover .photo {
+	transform: scale(1.3) translateY(20px);
+	-webkit-transform: scale(1.3) translateY(20px);
+	-moz-transform: scale(1.3) translateY(20px);
+	-ms-transform: scale(1.3) translateY(20px);
+	-o-transform: scale(1.3) translateY(20px);
+}
